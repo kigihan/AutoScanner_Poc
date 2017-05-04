@@ -1,2 +1,22 @@
 test
 hi sadness
+
+function evil($vote) 
+{ 
+    #Comments not allowed ]:-> 
+    #Sorry. 
+    $vote = str_replace('#', '', $vote); 
+    $vote = str_replace('/', '', $vote); 
+    $vote = str_replace('*', '', $vote); 
+    $vote = str_replace('-', '', $vote); 
+    return $vote; 
+} 
+function challenge($vote) 
+{ 
+    $vote = evil($vote); 
+    $q = "UPDATE `sqlinjection2` SET `$vote`=`$vote`+1"; 
+    $r = mysql_query($q); 
+    if(!$r) 
+        return mysql_error(); 
+    return 'Thanks for vote!'; 
+} 
