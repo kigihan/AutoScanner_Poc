@@ -1,6 +1,8 @@
 [Codecov][1] PHP Example
 ========================
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/dc5a80ecbb28412fa985baf6df519bc9)](https://www.codacy.com/app/kigihan/AutoScanner_Poc?utm_source=github.com&utm_medium=referral&utm_content=kigihan/AutoScanner_Poc&utm_campaign=badger)
+
 1. Collect coverage reports `vendor/bin/phpunit --coverage-clover=coverage.xml`, [see here][2]
 2. Call `bash <(curl -s https://codecov.io/bash)` at the end of your CI build, [see here][3]
   - [Learn how to include your upload repository token][4]
